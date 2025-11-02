@@ -1,0 +1,104 @@
+<h3 class="mb-4"> Periode Tanam & Hasil Panen</h3>
+
+<!-- Bagian 1: Pencatatan Periode Tanam -->
+<div class="card p-4 mb-4">
+  <h5 class="mb-3"> Tambah Periode Tanam</h5>
+  <form id="periodeForm" class="row g-3">
+    <div class="col-md-4">
+      <label class="form-label">Nama Tanaman</label>
+      <input type="text" id="tanaman" class="form-control" placeholder="Contoh: Cabai Rawit" required />
+    </div>
+    <div class="col-md-3">
+      <label class="form-label">Tanggal Mulai</label>
+      <input type="date" id="tanggalMulai" class="form-control" required />
+    </div>
+    <div class="col-md-3">
+      <label class="form-label">Tanggal Panen</label>
+      <input type="date" id="tanggalPanen" class="form-control" required />
+    </div>
+    <div class="col-md-2 align-self-end">
+      <button type="submit" class="btn btn-success w-100">Tambah</button>
+    </div>
+  </form>
+</div>
+
+<table class="table table-bordered table-striped mb-5">
+  <thead class="table-success">
+    <tr>
+      <th>Tanaman</th>
+      <th>Tanggal Mulai</th>
+      <th>Tanggal Panen</th>
+      <th>Status</th>
+      <th>Aksi</th>
+    </tr>
+  </thead>
+  <tbody id="periodeTable">
+    <tr>
+      <td>Cabai Rawit</td>
+      <td>2025-08-12</td>
+      <td>2025-11-12</td>
+      <td><span class="badge bg-warning text-dark">Berlangsung</span></td>
+      <td>
+        <button class="btn btn-sm btn-primary me-1" onclick="editPeriode(this)">Edit</button>
+        <button class="btn btn-sm btn-danger" onclick="deletePeriode(this)">Hapus</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Bagian 2: Pencatatan Hasil Panen -->
+<div class="card p-4 mb-3">
+  <h5 class="mb-3"> Pencatatan Hasil Panen</h5>
+  <form id="panenForm" class="row g-3">
+    <div class="col-md-3">
+      <label class="form-label">Nama Tanaman</label>
+      <input type="text" id="panenTanaman" class="form-control" placeholder="Contoh: Cabai Rawit" required />
+    </div>
+    <div class="col-md-3">
+      <label class="form-label">Tanggal Panen</label>
+      <input type="date" id="panenTanggal" class="form-control" required />
+    </div>
+    <div class="col-md-3">
+      <label class="form-label">Jumlah (kg)</label>
+      <input type="number" id="panenJumlah" class="form-control" placeholder="0" required />
+    </div>
+    <div class="col-md-3">
+      <label class="form-label">Kualitas</label>
+      <select id="panenKualitas" class="form-select" required>
+        <option value="">Pilih...</option>
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+      </select>
+    </div>
+    <div class="col-12 text-end">
+      <button type="submit" class="btn btn-success">Tambah Hasil Panen</button>
+    </div>
+  </form>
+</div>
+
+<table class="table table-bordered table-striped">
+  <thead class="table-success">
+    <tr>
+      <th>Tanaman</th>
+      <th>Tanggal Panen</th>
+      <th>Jumlah (kg)</th>
+      <th>Kualitas</th>
+      <th>Aksi</th>
+    </tr>
+  </thead>
+  <tbody id="panenTable">
+    <tr>
+      <td>Cabai Rawit</td>
+      <td>2025-11-12</td>
+      <td>12</td>
+      <td>A</td>
+      <td>
+        <button class="btn btn-sm btn-primary me-1" onclick="editPanen(this)">Edit</button>
+        <button class="btn btn-sm btn-danger" onclick="deletePanen(this)">Hapus</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+

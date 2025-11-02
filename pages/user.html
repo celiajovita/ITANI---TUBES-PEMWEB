@@ -1,0 +1,49 @@
+<h3 class="mb-4"> Kelola User</h3>
+
+<div class="card p-4 mb-3">
+  <form id="userForm" class="row g-3">
+    <div class="col-md-4">
+      <label class="form-label">Nama Lengkap</label>
+      <input type="text" class="form-control" id="userName" placeholder="Nama user..." required />
+    </div>
+    <div class="col-md-3">
+      <label class="form-label">Email</label>
+      <input type="email" class="form-control" id="userEmail" placeholder="user@email.com" required />
+    </div>
+    <div class="col-md-3">
+      <label class="form-label">Peran</label>
+      <select class="form-select" id="userRole" required>
+        <option value="">Pilih peran...</option>
+        <option>Admin</option>
+        <option>Petani</option>
+      </select>
+    </div>
+    <div class="col-md-2 text-end align-self-end">
+      <button type="submit" class="btn btn-success w-100">Tambah</button>
+    </div>
+  </form>
+</div>
+
+<table class="table table-bordered table-striped">
+  <thead class="table-success">
+    <tr>
+      <th>Nama</th>
+      <th>Email</th>
+      <th>Peran</th>
+      <th>Aksi</th>
+    </tr>
+  </thead>
+  <tbody id="userTable">
+    <tr>
+      <td>Bonnivier</td>
+      <td>adminSatu@gmail.com</td>
+      <td>Admin</td>
+      <td>
+        <button class="btn btn-sm btn-primary me-1" onclick="editUser(this)">Edit</button>
+        <button class="btn btn-sm btn-danger" onclick="deleteUser(this)">Hapus</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+

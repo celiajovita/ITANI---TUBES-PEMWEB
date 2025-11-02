@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ITani Dashboard</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h4> ITani</h4>
+    <a href="#" class="active" onclick="loadPage('dashboard.html', event)"> Dashboard</a>
+    <a href="#" onclick="loadPage('periode.html', event)"> Periode Tanam</a>
+    <a href="#" onclick="loadPage('stok.html', event)"> Stok Bibit dan Pupuk</a>
+    <a href="#" onclick="loadPage('user.html', event)"> Kelola User</a>
+  </div>
+
+  <!-- Content -->
+  <div class="content">
+    <div class="user-info">
+      <div class="notif position-relative me-3">
+        <img src="notification-alert-icon.png" alt="notif" width="10" height="10" style="cursor:pointer;" onclick="toggleNotif()" />
+        <span class="badge bg-danger position-absolute top-0 start-100 translate-middle" id="notifCount">3</span>
+        <div class="notif-dropdown card p-3 hidden" id="notifBox">
+          <p class="mb-1">🌡️ Suhu mencapai 31°C</p>
+          <p class="mb-1">💧 Kelembapan menurun ke 65%</p>
+          <p class="mb-0">🔋 Sensor pH sedang kalibrasi</p>
+          <p class="mb-1">⚠️ Sensor Rusak</p>
+        </div>
+      </div>
+      <span>Halo, Admin </span>
+      <img src="bonni.jpg" alt="User Avatar" />
+    </div>
+
+    <!-- Halaman akan dimuat di sini -->
+    <div id="main-content">
+      <p>Memuat konten...</p>
+    </div>
+  </div>
+
+  <!-- <script src="script.js"></script> -->
+  <script type="module" src="script.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
